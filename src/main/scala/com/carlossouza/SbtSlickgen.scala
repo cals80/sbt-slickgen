@@ -14,7 +14,8 @@ object SbtSlickgen extends AutoPlugin {
     lazy val genAll     = TaskKey[Unit]("gen-all", "Generate all the files described above")
 
     object GenSettings {
-      lazy val playFramework      = SettingKey[Boolean]("playFramework")
+      lazy val playFramework = SettingKey[Boolean]("playFramework")
+      lazy val packageName   = SettingKey[String]("packageName")
     }
   }
 
@@ -24,9 +25,10 @@ object SbtSlickgen extends AutoPlugin {
     * Provide default settings
     */
   override lazy val projectSettings = Seq(
-    GenSettings.playFramework := false,
+    GenSettings.playFramework := true,
+    GenSettings.packageName   := "com.example",
     genTables := {
-      println("Hello world! - " + GenSettings.playFramework.value.toString)
+      Generator.generateTables(GenSettings)
     },
     genFormats := {},
     genDaos := {},
