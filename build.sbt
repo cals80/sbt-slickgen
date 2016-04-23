@@ -1,12 +1,16 @@
 name := """sbt-slickgen"""
 
-version := "1.0"
+version := "1-SNAPSHOT"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.10.5"
 
-// Change this to another test framework if you prefer
-libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.4" % "test"
+organization := "com.carlossouza"
 
-// Uncomment to use Akka
-//libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.3.11"
+sbtPlugin := true
 
+libraryDependencies ++= Seq(
+  "mysql"               % "mysql-connector-java"  % "5.1.38",
+  "com.typesafe.slick"  %% "slick"                % "3.1.1",
+  "com.typesafe.slick"  %% "slick-codegen"        % "3.1.1",
+  "org.scalatest"       %% "scalatest"            % "2.2.1" % "test"
+)
