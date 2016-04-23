@@ -8,8 +8,7 @@ import sbt.{SettingKey, TaskKey, AutoPlugin}
 object SbtSlickgen extends AutoPlugin {
 
   object autoImport {
-    lazy val codeTables  = TaskKey[Seq[File]]("code-tables", "Generate the tables.scala from the database set in application.conf file")
-    lazy val genTables  = TaskKey[Unit]("gen-tables", "Generate the tables.scala from the database set in application.conf file")
+    lazy val genTables  = TaskKey[Seq[File]]("gen-tables", "Generate the tables.scala from the database set in application.conf file")
     lazy val genFormats = TaskKey[Unit]("gen-formats", "Generate the formats.scala from the database set in application.conf file")
     lazy val genDaos    = TaskKey[Unit]("gen-daos", "Generate the DAO service files from the database set in application.conf file")
     lazy val genAll     = TaskKey[Unit]("gen-all", "Generate all the files described above")
@@ -28,7 +27,7 @@ object SbtSlickgen extends AutoPlugin {
   override lazy val projectSettings = Seq(
     GenSettings.playFramework := true,
     GenSettings.packageName   := "com.example",
-    codeTables <<= Generator.generateTables(playFramework = false, "com.example"),
+    genTables <<= Tables.generate,
     genFormats := {},
     genDaos := {},
     genAll := {}
