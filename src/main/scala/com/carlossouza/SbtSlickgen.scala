@@ -28,7 +28,7 @@ object SbtSlickgen extends AutoPlugin {
     GenSettings.playFramework := true,
     GenSettings.packageName   := "com.example",
     genTables := {
-      Generator.generateTables(GenSettings)
+      Generator.generateTables(GenSettings.playFramework.value, GenSettings.packageName.value)
     },
     genFormats := {},
     genDaos := {},

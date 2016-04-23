@@ -15,20 +15,20 @@ object Generator {
   /**
     * This function generate the tables using Slick codegen plugin and put it in the right Play folder (models)
     */
-  def generateTables(genSettings: SbtSlickgen.autoImport.GenSettings.type) = (sourceManaged, dependencyClasspath in Compile, runner in Compile, streams) map { (dir, cp, r, s) =>
+  def generateTables(playFramework: Boolean, packageName: String) = (sourceManaged, dependencyClasspath in Compile, runner in Compile, streams) map { (dir, cp, r, s) =>
     var outputDir: String = ""
     var pkgDir: String = ""
     var pkgName: String = ""
     var confDir: String = ""
-    if (genSettings.playFramework.value) {
+    if (playFramework) {
       //val fullPath = new File("").getAbsolutePath + "/app/models/"
       pkgDir = "models"
       pkgName = "models"
       outputDir = new File("").getAbsolutePath + "/app/"
       confDir = "/conf/"
     } else {
-      pkgDir = genSettings.packageName.value.replace('.', '/')
-      pkgName = genSettings.packageName.value
+      pkgDir = packageName.replace('.', '/')
+      pkgName = packageName
       outputDir = new File("").getAbsolutePath + "/src/main/scala/"
       confDir = "/src/main/resources/"
     }
