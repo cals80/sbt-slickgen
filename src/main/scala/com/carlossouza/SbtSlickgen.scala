@@ -2,8 +2,7 @@ package com.carlossouza
 
 import java.io.File
 
-import sbt.Keys._
-import sbt.{SettingKey, TaskKey, AutoPlugin}
+import sbt.{AutoPlugin, TaskKey}
 
 object SbtSlickgen extends AutoPlugin {
 
@@ -12,11 +11,6 @@ object SbtSlickgen extends AutoPlugin {
     lazy val genFormats = TaskKey[Unit]("gen-formats", "Generate the formats.scala from the database set in application.conf file")
     lazy val genDaos    = TaskKey[Unit]("gen-daos", "Generate the DAO service files from the database set in application.conf file")
     lazy val genAll     = TaskKey[Unit]("gen-all", "Generate all the files described above")
-
-    object GenSettings {
-      lazy val playFramework = SettingKey[Boolean]("playFramework")
-      lazy val packageName   = SettingKey[String]("packageName")
-    }
   }
 
   import autoImport._
@@ -25,10 +19,8 @@ object SbtSlickgen extends AutoPlugin {
     * Provide default settings
     */
   override lazy val projectSettings = Seq(
-    GenSettings.playFramework := true,
-    GenSettings.packageName   := "com.example",
     genTables <<= Tables.generate,
-    genFormats := {},
+    genFormats := Formats.generate,
     genDaos := {},
     genAll := {}
   )
