@@ -42,7 +42,7 @@ object Tables {
     val filename = new File(".").getAbsolutePath + confDir + "application.conf"
     var result = ""
     for (line <- Source.fromFile(filename).getLines()) {
-      var index = line indexOf key
+      val index = line indexOf key
       if (index == 0) {
         result = line.drop(line.indexOf("=") + 1)
         if (result.take(1) == "\"") result = result.drop(1)
