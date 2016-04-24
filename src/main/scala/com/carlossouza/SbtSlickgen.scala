@@ -21,7 +21,11 @@ object SbtSlickgen extends AutoPlugin {
   override lazy val projectSettings = Seq(
     genTables <<= Tables.generate,
     genFormats := Formats.generate,
-    genDaos := {},
-    genAll := {}
+    genDaos := Daos.generate,
+    genAll := {
+      genTables
+      genFormats
+      genDaos
+    }
   )
 }

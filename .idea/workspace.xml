@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a3a57d5-fa2f-474e-8673-ad8880ab2a59" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/carlossouza/Formats.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/carlossouza/Settings.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/carlossouza/Daos.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/carlossouza/SbtSlickgen.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/carlossouza/SbtSlickgen.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/carlossouza/Tables.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/carlossouza/Tables.scala" />
     </list>
     <ignored path="sbt-slickgen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,10 +37,22 @@
       <file leaf-file-name="SbtSlickgen.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/carlossouza/SbtSlickgen.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42394015">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.77306736">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="e#25#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Daos.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/carlossouza/Daos.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="e#25#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,21 +62,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/carlossouza/Formats.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="68" column="41" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="41" />
               <folding>
                 <element signature="e#25#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Settings.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/carlossouza/Settings.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="e#25#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,6 +100,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/carlossouza/Tables.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/carlossouza/Settings.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/carlossouza/Formats.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/carlossouza/Daos.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/carlossouza/SbtSlickgen.scala" />
       </list>
     </option>
@@ -775,12 +774,12 @@
       <created>1461361018683</created>
       <option name="number" value="Default" />
       <updated>1461361018683</updated>
-      <workItem from="1461361022516" duration="11151000" />
+      <workItem from="1461361022516" duration="12317000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11151000" />
+    <option name="totallyTimeSpent" value="12317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -869,17 +868,27 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/carlossouza/Formats.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="68" column="41" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="41" />
           <folding>
             <element signature="e#25#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/carlossouza/Daos.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/carlossouza/SbtSlickgen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42394015">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.77306736">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="e#25#44#0" expanded="true" />
           </folding>
