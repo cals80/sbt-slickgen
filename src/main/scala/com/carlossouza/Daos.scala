@@ -29,14 +29,14 @@ object Daos {
   def createDaoFile(className: String): Unit = {
     val packageName = if (Settings.playFramework) "dao" else Settings.packageName
     val modelsName = if (Settings.playFramework) "models" else Settings.packageName
-    val targetFile = if (Settings.playFramework) Settings.outputDir + "dao/" + className + "DAO.scala" else Settings.outputDir + Settings.packageDir + className + "DAO.scala"
+    val targetFile = if (Settings.playFramework) Settings.outputDir + "dao/" + className + "DAO.scala" else Settings.outputDir + Settings.packageDir + "/" + className + "DAO.scala"
     val preset: Seq[String] = Seq(
       "package " + packageName + "\n\n",
       "import " + modelsName + ".{" + className + "Row, Tables}\n",
       "import javax.inject.Inject\n",
       "import scala.concurrent._\n",
       "import slick.driver.MySQLDriver\n",
-      "import slick.driver.MySQLDriver.api.\n\n",
+      "import slick.driver.MySQLDriver.api._\n\n",
       "class " + className + "DAO @Inject() (db: MySQLDriver.backend.Database) {\n",
       "\t" + "def fetchAll(): Future[Seq[" + className + "Row]] = db.run(Tables." + className + ".result)\n",
       "\t" + "def count(): Future[Int] = db.run(Tables." + className + ".length.result)\n",
