@@ -35,8 +35,8 @@
       <file leaf-file-name="Daos.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/carlossouza/Daos.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38900203">
-              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.30753565">
+              <caret line="30" column="83" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
               <folding>
                 <element signature="e#25#59#0" expanded="true" />
               </folding>
@@ -788,12 +788,12 @@
       <option name="number" value="Default" />
       <updated>1461361018683</updated>
       <workItem from="1461361022516" duration="15887000" />
-      <workItem from="1461510068423" duration="2617000" />
+      <workItem from="1461510068423" duration="2884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18504000" />
+    <option name="totallyTimeSpent" value="18771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-254" y="-1080" width="1920" height="1080" extended-state="0" />
@@ -924,8 +924,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/carlossouza/Daos.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38900203">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.30753565">
+          <caret line="30" column="83" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
           <folding>
             <element signature="e#25#59#0" expanded="true" />
           </folding>
