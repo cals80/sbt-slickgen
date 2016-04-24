@@ -27,10 +27,10 @@ object Daos {
   }
 
   def createDaoFile(className: String): Unit = {
-    val packageName = if (Settings.playFramework) "dao" else Settings.packageName
-    val modelsName = if (Settings.playFramework) "models" else Settings.packageName
-    val targetFile = if (Settings.playFramework) Settings.outputDir + "dao/" + className + "DAO.scala" else Settings.outputDir + Settings.packageDir + "/" + className + "DAO.scala"
-    if (Settings.playFramework) (new File(Settings.outputDir + "dao/")).mkdir()
+    val packageName = if (Settings.playFramework) "dao" else Settings.packageName + ".dao"
+    val modelsName = if (Settings.playFramework) "models" else Settings.packageName + ".models"
+    val targetFile = if (Settings.playFramework) Settings.outputDir + "dao/" + className + "DAO.scala" else Settings.outputDir + Settings.packageDir + "/dao/" + className + "DAO.scala"
+    if (Settings.playFramework) (new File(Settings.outputDir + "dao/")).mkdir() else (new File(Settings.outputDir + Settings.packageDir + "/dao/")).mkdir()
     val preset: Seq[String] = Seq(
       "package " + packageName + "\n\n",
       "import " + modelsName + ".{" + className + "Row, Tables}\n",

@@ -11,7 +11,7 @@ object Settings {
 
   def playFramework: Boolean = new java.io.File(new File("").getAbsolutePath + "/conf/application.conf").exists
 
-  def packageName: String = if (playFramework) "models" else getPackage
+  def packageName: String = if (playFramework) "models" else getPackage + ".models"
 
   def outputDir: String = if (playFramework) new File("").getAbsolutePath + "/app/" else new File("").getAbsolutePath + "/src/main/scala/"
 
