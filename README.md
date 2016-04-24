@@ -28,7 +28,7 @@ libraryDependencies ++= Seq(
 
 Finally in your ```application.conf``` file (either on ```conf/``` or ```src/main/resources/```):
 
-```
+```nginx
 slick.dbs.default.driver="slick.driver.MySQLDriver$"
 slick.dbs.default.db.driver="com.mysql.jdbc.Driver"
 slick.dbs.default.db.url="jdbc:mysql://localhost/mlg"
@@ -64,7 +64,7 @@ or each one separately.
 
 To check that your program worked, for example, if you are working on a **minimal-scala** project, just add this in your main file:
 
-```
+```scala
 package com.example
 
 import com.example.models.dao.CityDAO
