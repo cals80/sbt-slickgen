@@ -1,6 +1,6 @@
 package com.carlossouza
 
-import java.io.PrintWriter
+import java.io.{File, PrintWriter}
 
 import scala.collection.mutable
 import scala.io.Source
@@ -30,6 +30,7 @@ object Daos {
     val packageName = if (Settings.playFramework) "dao" else Settings.packageName
     val modelsName = if (Settings.playFramework) "models" else Settings.packageName
     val targetFile = if (Settings.playFramework) Settings.outputDir + "dao/" + className + "DAO.scala" else Settings.outputDir + Settings.packageDir + "/" + className + "DAO.scala"
+    if (Settings.playFramework) (new File(Settings.outputDir + "dao/")).mkdir()
     val preset: Seq[String] = Seq(
       "package " + packageName + "\n\n",
       "import " + modelsName + ".{" + className + "Row, Tables}\n",
